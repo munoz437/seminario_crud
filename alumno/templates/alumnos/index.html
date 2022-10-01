@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block titulo %}  Cursos  {% endblock %}
+{% block titulo %}  Alumnos  {% endblock %}
 
 {% block contenido %} 
 
 <div class="card">
     <div class="card-header">
-        <a name="" id="" class="btn btn-primary" href="{% url 'crearCurso' %}" role="button">Crear curso</a>
+        <a name="" id="" class="btn btn-primary" href="{% url 'crearAlumno' %}" role="button">Crear alumno</a>
     </div>
     <div class="card-body">
-        <h4 class="card-title">Cursos</h4>
+        <h4 class="card-title">Alumnos</h4>
         <div class="table-responsive">
             <table class="table table-dark">
                 <thead>
@@ -21,14 +21,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for curso in cursos %}
+                    {% for alumno in alumnos %}
                     <tr>
-                        <td>{{ curso.id }}</td>
-                        <td>{{ curso.nombre }}</td>
-                        <td>{{ curso.descripcion }}</td>
+                        <td>{{ alumno.id }}</td>
+                        <td>{{ alumno.nombres }}</td>
+                        <td>{{ alumno.apellidos }}</td>
                         <td>
-                            <a name="" id="" class="btn btn-warning" href="{% url 'editarCurso' curso.id %}" role="button">Editar</a>
-                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminarCurso' curso.id %}" role="button">Eliminar</a>
+                            <a name="" id="" class="btn btn-warning" href="{% url 'editarAlumno' alumno.id %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminarAlumno' alumno.id %}" role="button">Eliminar</a>
                         </td>
                     </tr>
                     {% endfor %}
