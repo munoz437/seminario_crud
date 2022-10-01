@@ -1,0 +1,15 @@
+python .\manage.py startapp universidad
+
+
+
+vista
+urls de la app
+urls del projecto
+
+
+
+modelo
+python .\manage.py makemigrations
+python .\manage.py migrate
+
+agregar al admin
