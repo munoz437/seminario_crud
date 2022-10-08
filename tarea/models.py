@@ -8,6 +8,7 @@ class Tarea(models.Model):
     descripcion= models.TextField(null=False,verbose_name="Descripcion")
     punteo= models.IntegerField(null=False,verbose_name="Punteo")
     fechaVencimiento= models.CharField(max_length=255,null=False,verbose_name="Fecha de Vencimiento")
+    fechaCreacion= models.DateField(auto_now_add=True,null=True,verbose_name="Fecha de creación")
 
     def __str__(self):
         fila= "Titulo "+self.titulo+"-"+" Descripcion "+self.descripcion+" "+self.punteo+" "+self.fechaVencimiento

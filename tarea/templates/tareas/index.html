@@ -19,6 +19,7 @@
                         <th scope="col">Descripcion</th>
                         <th scope="col">Punteo</th>
                         <th scope="col">Fecha de vencimiento</th>
+                        <th scope="col">Fecha de creacion</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -30,6 +31,7 @@
                         <td>{{ tarea.descripcion }}</td>
                         <td>{{ tarea.punteo }}</td>
                         <td>{{ tarea.fechaVencimiento }}</td>
+                        <td>{{ tarea.fechaCreacion }}</td>
                         <td>
                             <a name="" id="" class="btn btn-warning" href="{% url 'editarTarea' tarea.id %}" role="button">Editar</a>
                             <a name="" id="" class="btn btn-danger" href="{% url 'eliminarTarea' tarea.id %}" role="button">Eliminar</a>

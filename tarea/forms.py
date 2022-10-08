@@ -9,3 +9,4 @@ class TareaForm(forms.ModelForm):
         model = Tarea
         fields ='__all__'
         widgets = {'fechaVencimiento': DateInput(),}
+        fechaCreacion = forms.DateTimeField(disabled=True)
