@@ -16,7 +16,8 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Descripcion</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Fecha nacimiento</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -26,6 +27,7 @@
                         <td>{{ docente.id }}</td>
                         <td>{{ docente.nombres }}</td>
                         <td>{{ docente.apellidos }}</td>
+                        <td>{{ docente.fecha_nacimiento }}</td>
                         <td>
                             <a name="" id="" class="btn btn-warning" href="{% url 'editarDocente' docente.id %}" role="button">Editar</a>
                             <a name="" id="" class="btn btn-danger" href="{% url 'eliminarDocente' docente.id %}" role="button">Eliminar</a>
