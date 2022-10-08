@@ -15,3 +15,8 @@ class Curso(models.Model):
 
     def delete(self, using=None, keep_parents=False):
         super().delete()
+    class Meta:
+        verbose_name='Curso'
+        verbose_name_plural='Cursos'
+        db_table='tbl_cursos'
+        ordering=['nombre']

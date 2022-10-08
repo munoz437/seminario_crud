@@ -15,3 +15,8 @@ class Tarea(models.Model):
 
     def delete(self, using=None, keep_parents=False):
         super().delete()
+    class Meta:
+        verbose_name='Tarea'
+        verbose_name_plural='Tareas'
+        db_table='tbl_tareas'
+        ordering=['id']
