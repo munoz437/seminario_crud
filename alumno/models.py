@@ -7,8 +7,13 @@ class Alumno(models.Model):
     apellidos= models.TextField(null=False,verbose_name="Apellidos")
 
     def __str__(self):
-        fila= "Nombres "+self.nombres+"-"+" Apellidos "+self.apellidos
+        fila= self.nombres+" "+self.apellidos
         return fila
 
     def delete(self, using=None, keep_parents=False):
         super().delete()
+    class Meta:
+        verbose_name='Alumno'
+        verbose_name_plural='Alumnos'
+        db_table='tbl_alumnos'
+        ordering=['apellidos','-nombres']
